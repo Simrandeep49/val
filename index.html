@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Will you be my Valentine? </title>
+  <title>Will you be my Valentine?</title>
 
   <!-- Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -185,7 +185,7 @@
       <h2>YAY! 🎉</h2>
       <img
         class="fireworks"
-        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXVuYjR2ZmFwbGV1ODZ0bzV1eDExajVuYTdvNXFza2RoMmJyMmNnbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pAHAgWYYjWIE9DNLcC/giphy.gif"
+        src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
         alt="Fireworks"
       />
     </section>
@@ -287,16 +287,7 @@
       if (d < 140) moveNo(e.clientX, e.clientY);
     });
 
-    // Make "No" truly unclickable
-      noBtn.addEventListener("pointerdown", (e) => e.preventDefault());
-      noBtn.addEventListener("click", (e) => e.preventDefault());
-      noBtn.addEventListener("keydown", (e) => e.preventDefault());
-      noBtn.setAttribute("aria-disabled", "true");
-      #noBtn {
-       touch-action: none;
-      user-select: none;
-     }
-
+    noBtn.addEventListener("click", e => e.preventDefault());
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
@@ -309,6 +300,3 @@
   </script>
 </body>
 </html>
-
-
-
